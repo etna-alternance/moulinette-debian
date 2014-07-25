@@ -27,4 +27,8 @@ RUN apt-key add dotdeb.gpg
 RUN apt-get -qq update
 RUN apt-get upgrade -y
 
+# piscines
 RUN apt-get install -y build-essential php5 ruby
+
+# amsg
+RUN apt-get install -y host
