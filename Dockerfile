@@ -17,8 +17,8 @@ ENV TZ Europe/Paris
 
 RUN apt-get install -y wget curl
 
-RUN echo "deb http://packages.dotdeb.org wheezy all"           >> /etc/apt/sources.list
-RUN echo "deb-src http://packages.dotdeb.org wheezy all"       >> /etc/apt/sources.list
+RUN echo "deb http://packages.dotdeb.org stable all"           >> /etc/apt/sources.list
+RUN echo "deb-src http://packages.dotdeb.org stable all"       >> /etc/apt/sources.list
 RUN echo "deb http://packages.dotdeb.org wheezy-php55 all"     >> /etc/apt/sources.list
 RUN echo "deb-src http://packages.dotdeb.org wheezy-php55 all" >> /etc/apt/sources.list
 RUN wget http://www.dotdeb.org/dotdeb.gpg
@@ -27,4 +27,4 @@ RUN apt-key add dotdeb.gpg
 RUN apt-get -qq update
 RUN apt-get upgrade -y
 
-RUN apt-get install -y build-essential php5
+RUN apt-get install -y build-essential php5 ruby
