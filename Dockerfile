@@ -7,7 +7,6 @@ ENV LANG en_US.UTF-8
 ENV LANGUAGE en_US.UTF-8
 ENV TZ Europe/Paris
 
-
 # Common
 RUN apt-get -qq update \
 	&& apt-get install -y --no-install-recommends -y locales \
