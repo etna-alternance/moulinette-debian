@@ -28,7 +28,7 @@ RUN apt-get -qq update
 RUN apt-get upgrade -y
 
 # piscines
-RUN apt-get install -y build-essential php5 ruby tree
+RUN apt-get install -y build-essential php5 ruby tree bc
 
 # amsg
 RUN apt-get install -y ssh host
