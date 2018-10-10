@@ -32,3 +32,6 @@ RUN apt-get install -y build-essential php5 ruby tree bc default-jdk
 
 # amsg
 RUN apt-get install -y ssh host
+
+# mysql
+RUN apt-get install -y mysql-server
