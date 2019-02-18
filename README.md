@@ -24,4 +24,4 @@ Debian container pour nos moulinettes
 
 ## Commande
 
-Cette image n'a par de commande pas défaut.
+Cette image n'a pas de commande par défaut.
