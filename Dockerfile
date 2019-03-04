@@ -14,7 +14,7 @@ RUN apt-get -qq update \
 	&& sed -i '$ a\en_US.UTF-8 UTF-8' /etc/locale.gen \
 	&& sed -i '$ a\fr_FR.UTF-8 UTF-8' /etc/locale.gen \
 	&& locale-gen en_US.UTF-8 fr_FR.UTF-8 \
-	&& apt-get install -y --no-install-recommends wget curl build-essential php ruby ssh host tree bc
+	&& apt-get install -y --no-install-recommends wget curl build-essential php ruby ssh host tree bc git
 
 # Java
 RUN apt-get install -y default-jre default-jdk
