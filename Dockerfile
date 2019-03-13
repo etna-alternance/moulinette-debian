@@ -23,7 +23,7 @@ RUN sed -i -e "\$adeb http://http.us.debian.org/debian testing main non-free con
     sed -i -e "\$adeb-src http://http.us.debian.org/debian testing main non-free contrib" /etc/apt/sources.list
 RUN apt-get -qq update && apt install -y python3 python3-pip sqlite3 && ln -s /usr/bin/python3 /usr/bin/python && ln -s /usr/bin/pip3 /usr/bin/pip
 
-RUN pip install pep8 flask flask-sqlalchemy paramiko pyyaml && ln -s /root/.local/bin/pep8 /usr/local/bin/pep8
+RUN pip install pep8 flask flask-sqlalchemy paramiko pyyaml
 
 # Cleanup
 RUN rm -rf /var/lib/apt/lists/*
