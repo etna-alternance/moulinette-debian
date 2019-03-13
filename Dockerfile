@@ -7,7 +7,6 @@ ENV LANG en_US.UTF-8
 ENV LANGUAGE en_US.UTF-8
 ENV TZ Europe/Paris
 
-
 # Common
 RUN apt-get -qq update \
 	&& apt-get install -y --no-install-recommends -y locales \
@@ -22,7 +21,9 @@ RUN apt-get install -y default-jre default-jdk
 # Python
 RUN sed -i -e "\$adeb http://http.us.debian.org/debian testing main non-free contrib" /etc/apt/sources.list && \
     sed -i -e "\$adeb-src http://http.us.debian.org/debian testing main non-free contrib" /etc/apt/sources.list
-RUN apt-get -qq update && apt install -y python3 python3-pip && ln -s /usr/bin/python3 /usr/bin/python && ln -s /usr/bin/pip3 /usr/bin/pip
+RUN apt-get -qq update && apt install -y python3 python3-pip sqlite3 && ln -s /usr/bin/python3 /usr/bin/python && ln -s /usr/bin/pip3 /usr/bin/pip
+
+RUN pip install pep8 flask flask-sqlalchemy paramiko pyyaml && ln -s /root/.local/bin/pep8 /usr/local/bin/pep8
 
 # Cleanup
 RUN rm -rf /var/lib/apt/lists/*
