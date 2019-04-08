@@ -24,6 +24,8 @@ RUN sed -i -e "\$adeb http://http.us.debian.org/debian testing main non-free con
 RUN apt-get -qq update && apt install -y python3 python3-pip sqlite3 && ln -s /usr/bin/python3 /usr/bin/python && ln -s /usr/bin/pip3 /usr/bin/pip
 
 RUN pip install pycodestyle flask flask-sqlalchemy paramiko pyyaml pytest
+# Pour les moulinette de web
+RUN pip3 install bs4 cssutils
 
 # Cleanup
 RUN rm -rf /var/lib/apt/lists/*
