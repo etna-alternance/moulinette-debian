@@ -28,7 +28,7 @@ RUN apt-get -qq update && apt install -y python3 python3-pip sqlite3 && ln -s /u
 
 RUN pip install pycodestyle flask flask-sqlalchemy paramiko pyyaml pytest
 # Pour les moulinette de web
-RUN pip3 install bs4 cssutils
+RUN pip3 install bs4 cssutils validators
 
 # Cleanup
 RUN rm -rf /var/lib/apt/lists/*
