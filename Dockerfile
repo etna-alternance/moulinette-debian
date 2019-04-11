@@ -18,6 +18,9 @@ RUN apt-get -qq update \
 # Java
 RUN apt-get install -y default-jre default-jdk
 
+# mysql
+RUN apt-get install -y mysql-server
+
 # Python
 RUN sed -i -e "\$adeb http://http.us.debian.org/debian testing main non-free contrib" /etc/apt/sources.list && \
     sed -i -e "\$adeb-src http://http.us.debian.org/debian testing main non-free contrib" /etc/apt/sources.list
